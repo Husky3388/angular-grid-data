@@ -1,0 +1,17 @@
+<h2>My Records</h2>
+<div>
+  <label
+    >Record name:
+    <input #recordName />
+  </label>
+  <!-- (click) passes input value to add() and then clears the input -->
+  <button (click)="add(recordName.value); recordName.value = ''">add</button>
+</div>
+<ul class="records">
+  <li *ngFor="let record of records">
+    <a routerLink="/detail/{{ record.id }}">
+      <span class="badge">{{ record.id }}</span> {{ record.name }}
+    </a>
+    <button class="delete" title="delete record" (click)="delete(record)">x</button>
+  </li>
+</ul>
