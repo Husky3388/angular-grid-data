@@ -13,6 +13,8 @@ import { HttpClientInMemoryWebApiModule } from 'angular-in-memory-web-api';
 import { InMemoryDataService } from './in-memory-data.service';
 import { RecordSearchComponent } from './record-search/record-search.component';
 
+import { AgGridModule } from 'ag-grid-angular';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -34,6 +36,8 @@ import { RecordSearchComponent } from './record-search/record-search.component';
     // HttpClientInMemoryWebApiModule.forRoot(
     //   InMemoryDataService, { dataEncapsulation: false }
     // )
+
+    AgGridModule.withComponents([])
   ],
   providers: [],
   bootstrap: [AppComponent]
